@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 app.use(cors({
-  origin: 'adonis-theta.vercel.app'
+  origin: 'https://adonis-theta.vercel.app'
 }));
 app.use(express.json());
 
@@ -20,7 +20,7 @@ app.post('/start', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-4",
+        model: "gpt-5",
         messages: [{ role: "system", content: "he" }]
       },
       {
@@ -71,7 +71,7 @@ app.post('/chat', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-4",
+        model: "gpt-5",
         messages: sessions[sessionToken]  // Envia todo o histórico da sessão
       },
       {
@@ -114,7 +114,7 @@ app.post('/message/stream', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-4",
+        model: "gpt-5",
         messages: [
             {
               role: "system",
