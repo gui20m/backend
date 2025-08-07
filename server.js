@@ -40,8 +40,6 @@ app.post('/start', async (req, res) => {
 
     sessions[sessionToken] = [];
 
-    console.log("api connected");
-
     res.json({
       sessionToken,
       conversationId,
