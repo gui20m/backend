@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 app.use(cors({
-  origin: 'https://adonis-5qe0buq87-vfcfsdfsd.vercel.app'
+  origin: 'adonis-theta.vercel.app'
 }));
 app.use(express.json());
 
