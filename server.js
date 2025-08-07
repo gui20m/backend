@@ -102,8 +102,6 @@ app.post('/message/stream', async (req, res) => {
     return res.status(400).json({ error: "message and sessionToken are required" });
   }
 
-  console.log(message);
-
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
