@@ -20,7 +20,7 @@ app.post('/start', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-5",
+        model: "gpt-4",
         messages: [{ role: "system", content: "he" }]
       },
       {
@@ -71,7 +71,7 @@ app.post('/chat', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-5",
+        model: "gpt-4",
         messages: sessions[sessionToken]  // Envia todo o histórico da sessão
       },
       {
@@ -114,7 +114,7 @@ app.post('/message/stream', async (req, res) => {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: "gpt-5",
+        model: "gpt-4",
         messages: [
             {
               role: "system",
