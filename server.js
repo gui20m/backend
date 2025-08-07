@@ -97,12 +97,12 @@ app.post('/chat', async (req, res) => {
 });
 
 app.post('/message/stream', async (req, res) => {
+  console.log(message);
   const { message, sessionToken } = req.body;
   if (!message || !sessionToken) {
     return res.status(400).json({ error: "message and sessionToken are required" });
   }
 
-  // Configura o cabeçalho para SSE
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
