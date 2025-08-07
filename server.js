@@ -65,6 +65,7 @@ app.post('/chat', async (req, res) => {
     sessions[sessionToken] = [];
   }
   // Adiciona a nova mensagem ao histórico da sessão
+  console.log(message);
   sessions[sessionToken].push({ role: "user", content: message });
 
   try {
