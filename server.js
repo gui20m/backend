@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
 app.use(cors({
-  origin: 'https://www.adonitologycult.com/'
+  origin: 'https://www.adonitologycult.com'
 }));
 app.use(express.json());
 
